@@ -233,12 +233,10 @@ define postgresql::server::grant (
     command          => $grant_cmd,
     db               => $on_db,
     port             => $port_override,
-    connect_settings => $connect_settings,
     psql_user        => $psql_user,
     psql_group       => $group,
     psql_path        => $psql_path,
     unless           => $_unless,
-    onlyif           => $_onlyif,
     require          => Class['postgresql::server']
   }
 
