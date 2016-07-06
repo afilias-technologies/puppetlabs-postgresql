@@ -37,7 +37,6 @@ define postgresql::server::database(
     psql_group       => $group,
     psql_path        => $psql_path,
     port             => $port,
-    connect_settings => $connect_settings,
   }
 
   # Optionally set the locale switch. Older versions of createdb may not accept
